@@ -1,0 +1,22 @@
+<h2 style="text-align:center; margin-top:40px;">Log in</h2>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name),
+  html: { style: "max-width:380px;margin:40px auto;padding:24px;border:1px solid #ddd;border-radius:8px;background:#fff;" }) do |f| %>
+
+  <div style="margin-bottom:16px;">
+    <%= f.label :email, style: "display:block;margin-bottom:6px;" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email",
+      style: "width:100%;padding:10px;border:1px solid #ccc;border-radius:4px;" %>
+  </div>
+
+  <div style="margin-bottom:16px;">
+    <%= f.label :password, style: "display:block;margin-bottom:6px;" %>
+    <%= f.password_field :password, autocomplete: "current-password",
+      style: "width:100%;padding:10px;border:1px solid #ccc;border-radius:4px;" %>
+  </div>
+
+  <div style="margin-bottom:16px;">
+    <%= f.submit "Log in",
+      style: "width:100%;padding:10px;background:#2563eb;color:white;border:none;border-radius:4px;cursor:pointer;" %>
+  </div>
+<% end %>
