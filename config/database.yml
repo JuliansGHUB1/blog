@@ -13,11 +13,18 @@ test:
 
 production:
   primary:
+    adapter: postgresql
     url: <%= ENV["DATABASE_URL"] %>
-  cable:
-    url: <%= ENV["DATABASE_URL"] %>
-  queue:
-    url: <%= ENV["DATABASE_URL"] %>
+
   cache:
+    adapter: postgresql
+    url: <%= ENV["DATABASE_URL"] %>
+
+  queue:
+    adapter: postgresql
+    url: <%= ENV["DATABASE_URL"] %>
+
+  cable:
+    adapter: postgresql
     url: <%= ENV["DATABASE_URL"] %>
 
